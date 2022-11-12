@@ -395,7 +395,7 @@
 \subsubsection{Kutay Ugurlu}\label{kutay-ugurlu}}
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{1}{\boxspacing}
+\prompt{In}{incolor}{11}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np} 
 \PY{k+kn}{from} \PY{n+nn}{scipy}\PY{n+nn}{.}\PY{n+nn}{fft} \PY{k+kn}{import} \PY{n}{fft}\PY{p}{,} \PY{n}{ifft}\PY{p}{,} \PY{n}{fft2}\PY{p}{,} \PY{n}{ifft2}\PY{p}{,} \PY{n}{fftshift}
@@ -434,7 +434,7 @@ Hence
 \[h(n_1,n_2) = \begin{bmatrix} 0 & \frac{1}{4} & 0 \\  \frac{1}{4} & \frac{1}{2} & \frac{1}{4} \\ 0 & \frac{1}{4} & 0 \end{bmatrix}\]
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{2}{\boxspacing}
+\prompt{In}{incolor}{12}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{x} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{zeros}\PY{p}{(}\PY{p}{(}\PY{l+m+mi}{8}\PY{p}{,}\PY{l+m+mi}{8}\PY{p}{)}\PY{p}{)}
 \PY{n}{x}\PY{p}{[}\PY{l+m+mi}{3}\PY{p}{:}\PY{l+m+mi}{5}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{:}\PY{l+m+mi}{5}\PY{p}{]} \PY{o}{=} \PY{l+m+mi}{1}
@@ -479,7 +479,7 @@ Resultant convolution matches the given.
 \section{Q1b}\label{q1b}}
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{3}{\boxspacing}
+\prompt{In}{incolor}{13}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{H} \PY{o}{=} \PY{n}{h}\PY{p}{[}\PY{l+m+mi}{3}\PY{p}{:}\PY{l+m+mi}{6}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{:}\PY{l+m+mi}{6}\PY{p}{]}
 \PY{n}{H}
@@ -487,7 +487,7 @@ Resultant convolution matches the given.
 \end{tcolorbox}
 
             \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
-\prompt{Out}{outcolor}{3}{\boxspacing}
+\prompt{Out}{outcolor}{13}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 array([[0.  , 0.25, 0.  ],
        [0.25, 0.5 , 0.25],
@@ -496,7 +496,7 @@ array([[0.  , 0.25, 0.  ],
 \end{tcolorbox}
         
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{4}{\boxspacing}
+\prompt{In}{incolor}{14}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{u} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{linalg}\PY{o}{.}\PY{n}{svd}\PY{p}{(}\PY{n}{H}\PY{p}{)}
 \PY{n}{singular\PYZus{}values} \PY{o}{=} \PY{n}{u}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}
@@ -505,7 +505,7 @@ array([[0.  , 0.25, 0.  ],
 \end{tcolorbox}
 
             \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
-\prompt{Out}{outcolor}{4}{\boxspacing}
+\prompt{Out}{outcolor}{14}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 array([6.83012702e-01, 1.83012702e-01, 8.77708367e-18])
 \end{Verbatim}
@@ -522,7 +522,7 @@ singular
 value.}\label{as-can-be-seen-above-we-have-3-distinct-singular-values-for-the-convolution-kernel.-for-a-kernel-to-be-separable-it-should-be-expressed-as-one-outer-product.-however-when-we-use-the-svd-to-decompose-the-matrix-into-outer-products-we-see-that-it-has-two-nonzero-singular-values.-one-separable-filter-example-can-be-seen-below.-the-kernel-is-defined-as-an-outer-product-and-it-has-only-one-nonzero-singular-value.}}
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{5}{\boxspacing}
+\prompt{In}{incolor}{15}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{a} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{randint}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{100}\PY{p}{,}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{)}
 \PY{n}{b} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{outer}\PY{p}{(}\PY{n}{a}\PY{p}{,}\PY{n}{a}\PY{p}{)}
@@ -534,13 +534,13 @@ value.}\label{as-can-be-seen-above-we-have-3-distinct-singular-values-for-the-co
 \end{tcolorbox}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-[9.36000000e+03 1.12935218e-12 5.91456839e-16]
+[11590.     0.     0.]
     \end{Verbatim}
 
             \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
-\prompt{Out}{outcolor}{5}{\boxspacing}
+\prompt{Out}{outcolor}{15}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
-<matplotlib.image.AxesImage at 0x1bec5d204f0>
+<matplotlib.image.AxesImage at 0x25fe7dfc820>
 \end{Verbatim}
 \end{tcolorbox}
         
@@ -567,7 +567,7 @@ frequency domain, \emph{i.e.} \(H(k_1,k_2) = H(k_2,k_1)\)
 \(\begin{align} H(0,0) &= \sum\limits_{n_1=0}^2\sum\limits_{n_2=0}^2 h(n_1,n_2) = 1.5 \tag{1}\\ H(1,0) &= \sum\limits_{n_1=0}^2\sum\limits_{n_2=0}^2 h(n_1,n_2) e^{-j{\frac{2\pi n_1}{3}}} \tag{2}\\ &= (h(0,1)+h(0,2)+h(0,3)) + (h(1,0)+h(1,1)+h(1,2))e^{-j\frac{2\pi}{3}} + (h(2,1)+h(2,2)+h(3,2))e^{-j\frac{4\pi}{3}} \nonumber\\ &= \frac{1}{4} + e^{-j\frac{2\pi}{3}} + \frac{1}{4}e^{-j\frac{4\pi}{3}} \nonumber\\ H(0,1) &= H(1,0) \tag{3}\\ H(2,0) &= \sum\limits_{n_1=0}^2\sum\limits_{n_2=0}^2 h(n_1,n_2) e^{-j{\frac{4\pi n_1}{3}}} \tag{4}\\ &= (h(0,1)+h(0,2)+h(0,3)) + (h(1,0)+h(1,1)+h(1,2))e^{-j\frac{4\pi}{3}} + (h(2,1)+h(2,2)+h(3,2))e^{-j\frac{8\pi}{3}} \nonumber\\ &= \frac{1}{4} + e^{-j\frac{4\pi}{3}} + \frac{1}{4}e^{-j\frac{2\pi}{3}} \nonumber\\ H(0,2) &= H(2,0) \tag{5}\\ H(1,1) &= \sum\limits_{n_1=0}^2\sum\limits_{n_2=0}^2 h(n_1,n_2) e^{-j{\frac{2\pi (n_1+n_2)}{3}}} \tag{6}\\ &= \sum\limits_{n_2=0}^2 e^{-j{\frac{2\pi n_2}{3}}} \left( h(0,n_2) + h(1,n_2) e^{-j{\frac{2\pi}{3}}} + h(2,n_2) e^{-j{\frac{4\pi}{3}}} \right) \nonumber \\ &= 0 \ \ (See \ calculation \ below)\nonumber \\ H(2,2) &= \sum\limits_{n_1=0}^2\sum\limits_{n_2=0}^2 h(n_1,n_2) e^{-j{\frac{2\pi (2n_1+2n_2)}{3}}} \tag{7}\\ &= \sum\limits_{n_2=0}^2 e^{-j{\frac{4\pi n_2}{3}}} \left( h(0,n_2) + h(1,n_2) e^{-j{\frac{2\pi}{3}}} + h(2,n_2) e^{-j{\frac{4\pi}{3}}} \right) \nonumber \\ &= 0 \ \ (See \ calculation \ below)\nonumber \\ \end{align}\)
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{6}{\boxspacing}
+\prompt{In}{incolor}{16}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n+nb}{sum} \PY{o}{=} \PY{l+m+mi}{0}
 \PY{k}{for} \PY{n}{n2} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{)}\PY{p}{:}
@@ -591,28 +591,28 @@ H(2,2) = 0j
 example:}\label{cross-term-calculation-example}}
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{7}{\boxspacing}
+\prompt{In}{incolor}{17}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{p}{(}\PY{l+m+mf}{0.25} \PY{o}{+} \PY{l+m+mi}{1}\PY{o}{*}\PY{n}{np}\PY{o}{.}\PY{n}{exp}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{n}{j}\PY{o}{*}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{pi}\PY{o}{/}\PY{l+m+mi}{3}\PY{p}{)} \PY{o}{+} \PY{l+m+mf}{0.25}\PY{o}{*}\PY{n}{np}\PY{o}{.}\PY{n}{exp}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{n}{j}\PY{o}{*}\PY{l+m+mi}{4}\PY{o}{*}\PY{n}{pi}\PY{o}{/}\PY{l+m+mi}{3}\PY{p}{)}\PY{p}{)}
 \end{Verbatim}
 \end{tcolorbox}
 
             \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
-\prompt{Out}{outcolor}{7}{\boxspacing}
+\prompt{Out}{outcolor}{17}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 (-0.3749999999999999-0.6495190528383291j)
 \end{Verbatim}
 \end{tcolorbox}
         
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{8}{\boxspacing}
+\prompt{In}{incolor}{18}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{fft2}\PY{p}{(}\PY{n}{H}\PY{p}{)}
 \end{Verbatim}
 \end{tcolorbox}
 
             \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
-\prompt{Out}{outcolor}{8}{\boxspacing}
+\prompt{Out}{outcolor}{18}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 array([[ 1.5  -0.j        , -0.375-0.64951905j, -0.375+0.64951905j],
        [-0.375-0.64951905j,  0.   +0.j        ,  0.   -0.j        ],
@@ -631,7 +631,7 @@ totally expected, since DFT is the sampled version of DTFT where
 \section{Q1 e}\label{q1-e}}
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{9}{\boxspacing}
+\prompt{In}{incolor}{19}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{k}{def} \PY{n+nf}{linear\PYZus{}conv\PYZus{}mat}\PY{p}{(}\PY{n}{h}\PY{p}{:}\PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{,}\PY{n}{output\PYZus{}size}\PY{p}{)}\PY{p}{:}
     \PY{n}{L} \PY{o}{=} \PY{n}{h}\PY{o}{.}\PY{n}{size}
@@ -657,7 +657,7 @@ totally expected, since DFT is the sampled version of DTFT where
 \end{tcolorbox}
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{10}{\boxspacing}
+\prompt{In}{incolor}{20}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{k}{for} \PY{n}{\PYZus{}} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{50}\PY{p}{)}\PY{p}{:}
     \PY{n}{N1} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{randint}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{20}\PY{p}{)}
@@ -681,7 +681,7 @@ linear\_conv2\_mat works
     \end{Verbatim}
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{11}{\boxspacing}
+\prompt{In}{incolor}{21}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{H} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{randint}\PY{p}{(}\PY{l+m+mi}{5}\PY{p}{,}\PY{l+m+mi}{10}\PY{p}{,}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{)}\PY{p}{)}
 \PY{n}{x} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{randint}\PY{p}{(}\PY{l+m+mi}{5}\PY{p}{,}\PY{l+m+mi}{10}\PY{p}{,}\PY{p}{(}\PY{l+m+mi}{7}\PY{p}{,}\PY{l+m+mi}{7}\PY{p}{)}\PY{p}{)}
@@ -692,9 +692,9 @@ linear\_conv2\_mat works
 \end{tcolorbox}
 
             \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
-\prompt{Out}{outcolor}{11}{\boxspacing}
+\prompt{Out}{outcolor}{21}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
-<matplotlib.image.AxesImage at 0x1bec5ce4730>
+<matplotlib.image.AxesImage at 0x25fe7fec550>
 \end{Verbatim}
 \end{tcolorbox}
         
@@ -706,8 +706,21 @@ linear\_conv2\_mat works
     \hypertarget{q1f}{%
 \section{Q1f}\label{q1f}}
 
+    Let the \(i^{th}\) column of the image to convolved is called \(x_i\).
+Then, the matrix product \(Cx\) can be considered as ``convolution with
+matrices \(s_i\) and the vectors \(x_i\)''. Let the output image be y
+and the \(i^{th}\) column of it is called \(y_i\). Then:
+
+\[ y_i = \sum\limits_{k=0}^{L_2}s_{[i-k]}x_k \]
+
+where \(sk\) corresponds to the matrix-vector product with indices
+higher than \(P_2\) and negative indices of s correspond to zero
+multiplication. Since \(s\) matrix is a Toeplitz matrix, this product is
+equal to a convolution with a vector which circulates in the columns of
+this Toeplitz matrix, \emph{i.e.} the columns of the filter kernel.
+
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{12}{\boxspacing}
+\prompt{In}{incolor}{22}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{k}{def} \PY{n+nf}{conv2\PYZus{}by\PYZus{}fft}\PY{p}{(}\PY{n}{x}\PY{p}{:}\PY{n}{np}\PY{o}{.}\PY{n}{ndarray}\PY{p}{,} \PY{n}{h}\PY{p}{:}\PY{n}{np}\PY{o}{.}\PY{n}{ndarray}\PY{p}{)}\PY{p}{:}
     \PY{k}{if} \PY{n}{h}\PY{o}{.}\PY{n}{shape}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]} \PY{o}{\PYZgt{}} \PY{n}{x}\PY{o}{.}\PY{n}{shape}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]} \PY{o+ow}{and} \PY{n}{h}\PY{o}{.}\PY{n}{shape}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]} \PY{o}{\PYZgt{}} \PY{n}{x}\PY{o}{.}\PY{n}{shape}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{:}
@@ -733,7 +746,7 @@ linear\_conv2\_mat works
 \subsection{Test the function}\label{test-the-function}}
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{13}{\boxspacing}
+\prompt{In}{incolor}{23}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{k}{for} \PY{n}{\PYZus{}} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{1500}\PY{p}{)}\PY{p}{:}
     \PY{n}{L1} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{randint}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{15}\PY{p}{)}
@@ -757,7 +770,7 @@ conv2\_by\_fft works
 \section{Q1g}\label{q1g}}
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{14}{\boxspacing}
+\prompt{In}{incolor}{24}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{image} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{imread}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{mandrill.bmp}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
 \PY{n}{h} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,}\PY{o}{.}\PY{l+m+mi}{25}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{,}\PY{p}{[}\PY{o}{.}\PY{l+m+mi}{25}\PY{p}{,}\PY{o}{.}\PY{l+m+mi}{5}\PY{p}{,}\PY{o}{.}\PY{l+m+mi}{25}\PY{p}{]}\PY{p}{,}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,}\PY{o}{.}\PY{l+m+mi}{25}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{]}\PY{p}{)}
@@ -777,14 +790,14 @@ conv2\_by\_fft works
 \end{tcolorbox}
 
             \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
-\prompt{Out}{outcolor}{14}{\boxspacing}
+\prompt{Out}{outcolor}{24}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 Text(0.5, 1.0, 'Blurred image with \textbackslash{}n normalized kernel')
 \end{Verbatim}
 \end{tcolorbox}
         
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{HW_1_files/HW_1_26_1.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{HW_1_files/HW_1_27_1.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -798,7 +811,7 @@ anymore.}\label{in-the-last-image-we-observe-that-the-hairy-part-of-the-cheeks-o
 \section{Q2}\label{q2}}
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{15}{\boxspacing}
+\prompt{In}{incolor}{25}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{plt}\PY{o}{.}\PY{n}{figure}\PY{p}{(}\PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{25}\PY{p}{,}\PY{l+m+mi}{10}\PY{p}{)}\PY{p}{)}
 
@@ -858,14 +871,14 @@ anymore.}\label{in-the-last-image-we-observe-that-the-hairy-part-of-the-cheeks-o
 \end{tcolorbox}
 
             \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
-\prompt{Out}{outcolor}{15}{\boxspacing}
+\prompt{Out}{outcolor}{25}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 Text(0, 0.5, '\$f\_2\$')
 \end{Verbatim}
 \end{tcolorbox}
         
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{HW_1_files/HW_1_29_1.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{HW_1_files/HW_1_30_1.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -878,7 +891,7 @@ maximum 1 meter period.
 \section{Q3a}\label{q3a}}
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{16}{\boxspacing}
+\prompt{In}{incolor}{26}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{k+kn}{from} \PY{n+nn}{skimage}\PY{n+nn}{.}\PY{n+nn}{color} \PY{k+kn}{import} \PY{n}{rgb2gray}
 \PY{n}{image} \PY{o}{=} \PY{n}{rgb2gray}\PY{p}{(}\PY{n}{plt}\PY{o}{.}\PY{n}{imread}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{256by256grayscaleLena.png}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}\PY{p}{)}
@@ -892,19 +905,19 @@ maximum 1 meter period.
 \end{tcolorbox}
 
             \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
-\prompt{Out}{outcolor}{16}{\boxspacing}
+\prompt{Out}{outcolor}{26}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
-<matplotlib.image.AxesImage at 0x1bec3fa2400>
+<matplotlib.image.AxesImage at 0x25fe829bbb0>
 \end{Verbatim}
 \end{tcolorbox}
         
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{HW_1_files/HW_1_32_1.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{HW_1_files/HW_1_33_1.png}
     \end{center}
     { \hspace*{\fill} \\}
     
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{17}{\boxspacing}
+\prompt{In}{incolor}{27}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{c+c1}{\PYZsh{} Plot the surface.}
 \PY{n}{fig} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{figure}\PY{p}{(}\PY{n}{figsize}\PY{o}{=}\PY{n}{plt}\PY{o}{.}\PY{n}{figaspect}\PY{p}{(}\PY{o}{.}\PY{l+m+mi}{5}\PY{p}{)}\PY{p}{)}
@@ -929,14 +942,14 @@ maximum 1 meter period.
 \end{tcolorbox}
 
             \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
-\prompt{Out}{outcolor}{17}{\boxspacing}
+\prompt{Out}{outcolor}{27}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 Text(0.5, 0.92, 'Centered DFT')
 \end{Verbatim}
 \end{tcolorbox}
         
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{HW_1_files/HW_1_33_1.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{HW_1_files/HW_1_34_1.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -946,7 +959,7 @@ Text(0.5, 0.92, 'Centered DFT')
     Take the image and upsample with zeroes in every 2 elements.
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{18}{\boxspacing}
+\prompt{In}{incolor}{28}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{image} \PY{o}{=} \PY{n}{rgb2gray}\PY{p}{(}\PY{n}{plt}\PY{o}{.}\PY{n}{imread}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{256by256grayscaleLena.png}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}\PY{p}{)}
 \PY{n}{cropped\PYZus{}image} \PY{o}{=} \PY{n}{image}\PY{p}{[}\PY{l+m+mi}{60}\PY{p}{:}\PY{l+m+mi}{188}\PY{p}{,}\PY{l+m+mi}{60}\PY{p}{:}\PY{l+m+mi}{188}\PY{p}{]}
@@ -955,21 +968,21 @@ Text(0.5, 0.92, 'Centered DFT')
 \end{tcolorbox}
 
             \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
-\prompt{Out}{outcolor}{18}{\boxspacing}
+\prompt{Out}{outcolor}{28}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
-<matplotlib.image.AxesImage at 0x1bece034490>
+<matplotlib.image.AxesImage at 0x25fef01aa90>
 \end{Verbatim}
 \end{tcolorbox}
         
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{HW_1_files/HW_1_36_1.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{HW_1_files/HW_1_37_1.png}
     \end{center}
     { \hspace*{\fill} \\}
     
     Calculate its 2D Fourier transform.
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{19}{\boxspacing}
+\prompt{In}{incolor}{29}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{s1}\PY{p}{,}\PY{n}{s2} \PY{o}{=} \PY{n}{cropped\PYZus{}image}\PY{o}{.}\PY{n}{shape}
 \PY{n}{upsampled\PYZus{}image} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{zeros}\PY{p}{(}\PY{p}{(}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{s1}\PY{p}{,}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{s2}\PY{p}{)}\PY{p}{)}
@@ -980,14 +993,14 @@ Text(0.5, 0.92, 'Centered DFT')
 \end{tcolorbox}
 
             \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
-\prompt{Out}{outcolor}{19}{\boxspacing}
+\prompt{Out}{outcolor}{29}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
-<matplotlib.image.AxesImage at 0x1bec3b0c160>
+<matplotlib.image.AxesImage at 0x25fe8cd2700>
 \end{Verbatim}
 \end{tcolorbox}
         
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{HW_1_files/HW_1_38_1.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{HW_1_files/HW_1_39_1.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -995,7 +1008,7 @@ Text(0.5, 0.92, 'Centered DFT')
 ideal low pass filter.
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{20}{\boxspacing}
+\prompt{In}{incolor}{30}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{c+c1}{\PYZsh{}\PYZsh{} Take the center portion, equate remaining to 0 }
 \PY{n}{shifted} \PY{o}{=} \PY{n}{fftshift}\PY{p}{(}\PY{n}{FFT\PYZus{}upsampled}\PY{p}{)}
@@ -1007,27 +1020,27 @@ ideal low pass filter.
 \end{tcolorbox}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-<ipython-input-20-83fcb38667d6>:6: RuntimeWarning: divide by zero encountered in
+<ipython-input-30-83fcb38667d6>:6: RuntimeWarning: divide by zero encountered in
 log10
   plt.imshow(np.log10(np.abs(Filtered\_FFT)))
     \end{Verbatim}
 
             \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
-\prompt{Out}{outcolor}{20}{\boxspacing}
+\prompt{Out}{outcolor}{30}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
-<matplotlib.image.AxesImage at 0x1becc562220>
+<matplotlib.image.AxesImage at 0x25fe87df7c0>
 \end{Verbatim}
 \end{tcolorbox}
         
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{HW_1_files/HW_1_40_2.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{HW_1_files/HW_1_41_2.png}
     \end{center}
     { \hspace*{\fill} \\}
     
     Take the inverse 2D FFT to obtain the interpolated image.
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{21}{\boxspacing}
+\prompt{In}{incolor}{31}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{interpolated\PYZus{}image} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{real}\PY{p}{(}\PY{n}{ifft2}\PY{p}{(}\PY{n}{Filtered\PYZus{}FFT}\PY{p}{)}\PY{p}{)}
 \PY{n}{plt}\PY{o}{.}\PY{n}{imshow}\PY{p}{(}\PY{n}{interpolated\PYZus{}image}\PY{p}{)}
@@ -1035,14 +1048,14 @@ log10
 \end{tcolorbox}
 
             \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
-\prompt{Out}{outcolor}{21}{\boxspacing}
+\prompt{Out}{outcolor}{31}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
-<matplotlib.image.AxesImage at 0x1becc6409d0>
+<matplotlib.image.AxesImage at 0x25ff03b0f10>
 \end{Verbatim}
 \end{tcolorbox}
         
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{HW_1_files/HW_1_42_1.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{HW_1_files/HW_1_43_1.png}
     \end{center}
     { \hspace*{\fill} \\}
     
